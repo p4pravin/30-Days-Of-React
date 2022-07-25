@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+</head>
+
+<body>
+        <script src="./scope.js"></script>
+
+       <script src="./countries.js"></script>
+       <script src="./webtech.js"></script>
+        <script>
+
+            // console.log(countries.slice(0, 11)) ;
+            // console.log(countries.length)  ;
+            
+            num = countries.length ;
+            md = parseInt(num/2)
+            console.log(md)
+
+            if (countries.length % 2 == 0)    //even number of countries
+            {
+                //console.log(countries.slice(md - 1, md + 1)) ;
+                console.log(countries.slice(0, md)) ;
+                console.log(countries.slice(md )) ;
+            }
+            else 
+            {
+                console.log("odd")
+                console.log(countries.slice(0 ,  md+1)) ;
+                console.log(countries.slice(md+1)) ;
+
+
+            }
+            // const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24] ;
+            // ages.sort() 
+            // console.log(ages.sort())
+            // console.log(ages[0])
+            // console.log(ages[ages.length-1])
+
+            // mdn = (ages[4] + ages[5] )/2.0
+            // console.log(mdn)
+            // sm = 0 
+            // for (const elem of  ages) {
+            //     //console.log(elem)
+            //     sm +=elem 
+            // }
+            // avg = sm/ages.length 
+            // console.log(avg)
+
+
+    </script>
+</body>
+</html>

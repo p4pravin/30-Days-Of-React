@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<body>
+    <script>
+        // dog = {
+        //     name:"Tommy", 
+        //     age:10,
+        //     color:"white",
+        //     legs:4,
+        //     breed:"Daschund",
+        //     bark:function() {
+        //         return "Woof woof";
+        //     },
+        //     getDogInfo:function() {
+        //         return ` ${this.name} is a ${this.age} year old ${this.color} ${this.breed}.`
+        //     }
+        // }
+        
+        
+        // console.log("Name:", dog.name)
+        // console.log("Age",  dog.age , "years")
+        // console.log("Legs", dog.legs)
+        // console.log("Colour", dog.color)
+        // console.log("Bark", dog.bark())
+        //console.log("Info", dog.getDogInfo())
+
+        personAccount = {
+            firstName:"ABC",
+            lastName:"DEF",
+            incomes: [
+                {amount:"10000", description:"Income1"},
+                {amount:"900", description:"Income2"},
+                {amount:"650", description:"Income3"},
+                {amount:"250", description:"Income4"},
+            ],
+            expenses: [
+                {amount:"3000", description:"expense1"},
+                {amount:"1000", description:"expense2"},
+                {amount:"3500", description:"expense3"},
+                {amount:"500", description:"expense4"},
+            ],
+            totalIncome:function() {
+                ti = 0
+                this.incomes.forEach((income, i) => {
+                    ti += parseInt(income["amount"])
+                });
+                return ti ;
+            },
+            totalExpense:function() {
+                te = 0
+                this.expenses.forEach((expense, i) => {
+                    te += parseInt(expense["amount"])
+                });
+                return te ;
+
+            },
+            addIncome:function(namount, ndesc) {
+                income = {
+                    amount: namount, 
+                    description: ndesc
+                }
+                this.incomes.push(income)
+            },
+
+            addExpense:function(namount, ndesc) {
+                expense = {
+                    amount: namount, 
+                    description: ndesc
+                }
+                this.expenses.push(expense)
+            },
+            accountBalance:function() {
+                ti = this.totalIncome() 
+                te = this.totalExpense() 
+                return (parseInt(ti) - parseInt(te))
+            }
+        }
+
+        personAccount.addIncome(50000, "Bonus")
+        personAccount.addExpense(25000, "Fridge")
+        console.log("Total Income", personAccount.totalIncome())
+        console.log("Toal Expense", personAccount.totalExpense())
+        console.log("Account Balance", personAccount.accountBalance())
+
+    </script>
+</body>
+</html>
